@@ -1,4 +1,4 @@
-[![sb-edutoria-logo.png](https://i.postimg.cc/8s8NwgCD/sb-edutoria-logo.png)](https://postimg.cc/8fb2P3Wn)
+[![sb-edutoria-logo.png](https://i.postimg.cc/8s8NwgCD/sb-edutoria-logo.png)](https://edutoria.ru/)
 
 # Тестовое задание для автора курса «Java-разработчик»
 
