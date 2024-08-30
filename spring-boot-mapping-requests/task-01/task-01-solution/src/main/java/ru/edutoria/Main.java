@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>
  * Подсказка: Используйте @RequestParam.
  * <p>
- * Пример вызова в командной строке Win: http://localhost:8080/greet?name=John
+ * Пример вызова в командной строке Win: curl -X GET http://localhost:8080/greet?name=John
  * Ожидаемый результат: Hello, John!.
  */
 @SpringBootApplication
