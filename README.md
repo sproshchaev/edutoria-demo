@@ -1,3 +1,5 @@
+[![sb-edutoria-logo.png](https://i.postimg.cc/8s8NwgCD/sb-edutoria-logo.png)](https://postimg.cc/8fb2P3Wn)
+
 # Тестовое задание для автора курса «Java-разработчик»
 
 ## Тема: Мэппинг и получение данных из запросов в контроллерах Spring Boot
