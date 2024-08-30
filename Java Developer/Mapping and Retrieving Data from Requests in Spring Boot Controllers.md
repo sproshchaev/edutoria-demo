@@ -1,3 +1,5 @@
+[![spring-boot-logo.png](https://i.postimg.cc/43zG4SwF/spring-boot-logo.png)](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-requestmapping.html)
+
 ## Урок: Мэппинг и получение данных из запросов в контроллерах Spring Boot
 
 ### 1. Вступление
