@@ -27,6 +27,12 @@
 
 1. Вступление  
 2. Основная часть урока  
-3. Выводы  
-
+3. Выводы   
+  
+  
+  
 [Перейти к уроку](https://github.com/sproshchaev/edutoria-demo/blob/main/Java%20Developer/Mapping%20and%20Retrieving%20Data%20from%20Requests%20in%20Spring%20Boot%20Controllers.md)
+
+[Перейти в Репозиторий для выполнения практических заданий урока](https://github.com/sproshchaev/edutoria-demo/tree/main/spring-boot-mapping-requests)
+
+[Пройти контрольный тест по уроку](https://forms.gle/ThAcBTWHqr1hAUYY7)
