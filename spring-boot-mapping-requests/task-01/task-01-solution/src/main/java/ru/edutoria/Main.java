@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * в зависимости от параметра name.
  * <p>
  * Подсказка: Используйте @RequestParam.
+ * <p>
+ * Пример вызова в командной строке Win: http://localhost:8080/greet?name=John
+ * Ожидаемый результат: Hello, John!.
  */
 @SpringBootApplication
 public class Main {
