@@ -1,5 +1,8 @@
 package ru.edutoria;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Задание 1: Создайте контроллер с методом, который принимает GET-запрос и возвращает персонализированное приветствие
  * в зависимости от параметра name.

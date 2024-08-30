@@ -1,5 +1,8 @@
 package ru.edutoria;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Задание 2: Создайте контроллер, который принимает POST-запрос с данными пользователя в формате JSON и возвращает
  * его возраст.

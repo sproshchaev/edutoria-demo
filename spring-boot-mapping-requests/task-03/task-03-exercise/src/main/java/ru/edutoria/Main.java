@@ -1,5 +1,8 @@
 package ru.edutoria;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Задание 3: Реализуйте метод, который будет принимать переменную пути (например, ID пользователя) и возвращать
  * это значение.
