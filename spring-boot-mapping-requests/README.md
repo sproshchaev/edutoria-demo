@@ -7,6 +7,8 @@ git clone https://github.com/sproshchaev/edutoria-demo.git
 ```
 2. Открыть проект в IDE IntelliJ IDEA и выполнить последовательно задания с первого по третье, в соответствии с комментариями, обозначенными в коде через `// TODO: ...`
 
+3. В случае возникновения вопросов - проверить правильность выполнения решений можно по ссылкам `Решение задания 1, Решение задания 2, Решение задания 3`
+
 Задание 1: Создайте контроллер с методом, который принимает GET-запрос и возвращает персонализированное приветствие в зависимости от параметра name.
 
 [Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-exercise/src/main/java/ru/edutoria/Main.java)
@@ -24,6 +26,6 @@ git clone https://github.com/sproshchaev/edutoria-demo.git
 ***  
 #### _Проверить правильность выполнения практических заданий:_
 
-[_Задание 1_](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-solution/src/main/java/ru/edutoria/Main.java)  
-[_Задание 2_](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-solution/src/main/java/ru/edutoria/Main.java)  
-[_Задание 3_](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-solution/src/main/java/ru/edutoria/Main.java)  
+[_Решение задания 1_](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-solution/src/main/java/ru/edutoria/Main.java)  
+[_Решение задания 2_](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-solution/src/main/java/ru/edutoria/Main.java)  
+[_Решение задания 3_](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-solution/src/main/java/ru/edutoria/Main.java)  
