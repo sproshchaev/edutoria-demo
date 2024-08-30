@@ -159,7 +159,7 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 
 5. Результаты теста будут автоматически направлены в почту, указанную при регистрации.
 
-#### Удачи на тесте!
+#### Удачи! 
 
 [Пройти тест](https://forms.gle/ThAcBTWHqr1hAUYY7)
 
