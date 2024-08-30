@@ -6,7 +6,15 @@ package ru.edutoria;
  * <p>
  * Подсказка: Используйте @RequestParam.
  */
+// TODO: Установите необходимую аннотацию для класса
 public class Main {
     public static void main(String[] args) {
+
+        // TODO: Задайте ключевую команду для запуска приложения Spring Boot
+
+        // TODO: Настройте правильно в пакете controller класс GreetingController
+
+        // TODO: Запустите приложение и попробуйте сделать запрос в браузере вида http://localhost:8080/greet?name=John
+        //  и убедитесь, что оно возвращает Hello, John!.
     }
 }
