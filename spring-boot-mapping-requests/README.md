@@ -11,7 +11,7 @@
 Задание 3: Реализуйте метод, который будет принимать переменную пути (например, ID пользователя) и возвращать это значение.
 
 [Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-exercise/src/main/java/ru/edutoria/Main.java)  
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
     
     
 ***  
