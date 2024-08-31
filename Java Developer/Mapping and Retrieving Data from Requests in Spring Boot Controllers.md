@@ -115,6 +115,9 @@ public class MyController {
   ```
   Здесь `method = RequestMethod.POST` указывает, что метод `create()` обрабатывает только POST-запросы.
 
+**Примечание:**  
+Если вы используете Spring 4.3 и выше — то вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Позже мы рассмотрим, как их применять на практике.
+
 #### 3) Атрибут **`params`** определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
 
 **Пример:**  
@@ -205,6 +208,10 @@ public class MyController {
   - Принимает тело запроса в формате JSON (`consumes = "application/json"`).
 
 Эти атрибуты позволяют гибко настраивать обработку запросов и отвечать на различные сценарии использования в веб-приложении.
+
+Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Рассмотрим, как их применять на практике.
+
+!!!
 
 #### 2.3. Получение данных из запросов
 
