@@ -252,7 +252,7 @@ public class MyController {
 
 Эти атрибуты позволяют гибко настраивать обработку запросов и отвечать на различные сценарии использования в веб-приложении.
 
-Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
+Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо `@RequestMapping` с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
 
 Рассмотрим, как их применять на практике.
 
