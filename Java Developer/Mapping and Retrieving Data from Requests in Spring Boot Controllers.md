@@ -437,19 +437,19 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
    
    _(подсказка: используйте `@RequestParam`)_
 
-[Перейти к выполнению задания 1](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-exercise/src/main/java/ru/edutoria/Main.java)
+[Перейти к выполнению Задания 1](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-exercise/src/main/java/ru/edutoria/Main.java)
 
 **Задание 2**: Создайте контроллер, который принимает POST-запрос с данными пользователя в формате JSON и возвращает его возраст.  
    
    _(подсказка: используйте `@RequestBody`)_
 
-[Перейти к выполнению задания 2](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-exercise/src/main/java/ru/edutoria/Main.java)
+[Перейти к выполнению Задания 2](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-exercise/src/main/java/ru/edutoria/Main.java)
 
 **Задание 3**: Реализуйте метод, который будет принимать переменную пути (например, ID пользователя) и возвращать это значение.  
    
    _(подсказка: используйте `@PathVariable`)_
 
-[Перейти к выполнению задания 3](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-exercise/src/main/java/ru/edutoria/Main.java)  
+[Перейти к выполнению Задания 3](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-exercise/src/main/java/ru/edutoria/Main.java)  
 
 ### 3. Выводы и подведение итогов урока
 
@@ -494,3 +494,22 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 --- 
 
 **На следующем уроке** мы углубимся в создание REST API и разберем, как обрабатывать различные HTTP-методы и статус-коды ответов.
+
+**Список рекомендованной литературы:**
+
+1. **"Spring Boot in Action"** — Craig Walls  
+   Книга отлично подходит для новичков и объясняет основные принципы работы с Spring Boot, включая создание контроллеров, мэппинг запросов, обработку данных и другие важные темы.
+
+2. **"Spring Microservices in Action"** — John Carnell  
+   Эта книга поможет углубиться в разработку RESTful-сервисов и микросервисов с использованием Spring Boot, включая обработку запросов и настройку контроллеров.
+
+3. **Документация Spring Framework**  
+   Официальная документация Spring содержит актуальную и подробную информацию о мэппинге запросов, использовании аннотаций, работе с контроллерами и других аспектах: [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html).
+
+4. **"Building a RESTful Web Service with Spring Boot"** — Spring Guides  
+   Этот краткий онлайн-гид от разработчиков Spring объясняет основы создания RESTful веб-сервисов с использованием Spring Boot, включая настройку контроллеров и мэппинг запросов: [Spring Boot Guide](https://spring.io/guides/gs/rest-service/).
+
+5. **Видеокурс "Spring & Hibernate for Beginners (includes Spring Boot)"** — Udemy  
+   Видеокурс, который охватывает основные концепции Spring Framework и Spring Boot, в том числе работу с контроллерами и мэппингом запросов. Идеально подходит для визуального изучения и практического опыта: [Udemy Spring Boot Course](https://www.udemy.com/course/spring-hibernate-tutorial/).
+
+Эти ресурсы помогут вам глубже понять, как эффективно использовать контроллеры и мэппинг запросов в Spring Boot.
