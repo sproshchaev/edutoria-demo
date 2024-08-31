@@ -355,6 +355,7 @@ public String greet(@RequestParam(name = "name", defaultValue = "Guest") String 
     return "Hello, " + name;
 }
 ```
+**Объяснение:**  
 
 **Пример запроса:** `GET /greet?name=John`  
 **Результат:** `"Hello, John"`
@@ -370,6 +371,9 @@ public String getUserById(@PathVariable("id") Long userId) {
 }
 ```
 
+**Объяснение:**  
+
+
 **Пример запроса:** `GET /user/123`  
 **Результат:** `"User ID: 123"`
 
@@ -383,6 +387,8 @@ public User createUser(@RequestBody User user) {
     return user;
 }
 ```
+**Объяснение:**  
+
 
 **Пример запроса:** `POST /users` с телом запроса:
 
@@ -407,6 +413,7 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
     return "User-Agent: " + userAgent;
 }
 ```
+**Объяснение:**  
 
 **Пример запроса:**  
 **Результат:** Вывод заголовка `User-Agent`.
