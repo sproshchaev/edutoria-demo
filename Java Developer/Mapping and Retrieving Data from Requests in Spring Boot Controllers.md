@@ -94,7 +94,7 @@ public class MyController {
 #### 1. **`value` или `path`**
 - **Описание**: Определяет URL-адреса (или пути), к которым привязан метод контроллера.
 - **Тип**: `String[]` (массив строк)
-- **Пример использования**:
+- **Пример:**
   ```java
   @RequestMapping(value = "/api/greet", method = RequestMethod.GET)
   public String greet() {
@@ -106,7 +106,7 @@ public class MyController {
 #### 2. **`method`**
 - **Описание**: Указывает HTTP-методы (GET, POST, PUT, DELETE и т.д.), для которых этот метод контроллера должен быть вызван.
 - **Тип**: `RequestMethod[]` (массив значений перечисления `RequestMethod`)
-- **Пример использования**:
+- **Пример:**
   ```java
   @RequestMapping(value = "/api/create", method = RequestMethod.POST)
   public String create() {
@@ -118,7 +118,7 @@ public class MyController {
 #### 3. **`params`**
 - **Описание**: Определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
 - **Тип**: `String[]` (массив строк)
-- **Пример использования**:
+- **Пример:**
   ```java
   @RequestMapping(value = "/api/search", params = "query")
   public String search(@RequestParam String query) {
@@ -130,7 +130,7 @@ public class MyController {
 #### 4. **`headers`**
 - **Описание**: Определяет заголовки HTTP-запроса, которые должны присутствовать для того, чтобы метод был вызван. Можно указывать конкретные значения заголовков.
 - **Тип**: `String[]` (массив строк)
-- **Пример использования**:
+- **Пример:**
   ```java
   @RequestMapping(value = "/api/info", headers = "X-Requested-With=XMLHttpRequest")
   public String info() {
@@ -142,7 +142,7 @@ public class MyController {
 #### 5. **`produces`**
 - **Описание**: Определяет типы контента (MIME-типы), которые метод может возвращать. Используется для указания формата ответа.
 - **Тип**: `String[]` (массив строк)
-- **Пример использования**:
+- **Пример:**
   ```java
   @RequestMapping(value = "/api/json", produces = "application/json")
   public String getJson() {
@@ -154,7 +154,7 @@ public class MyController {
 #### 6. **`consumes`**
 - **Описание**: Определяет типы контента (MIME-типы), которые метод может принимать в запросе. Используется для указания формата входных данных.
 - **Тип**: `String[]` (массив строк)
-- **Пример использования**:
+- **Пример:**
   ```java
   @RequestMapping(value = "/api/upload", method = RequestMethod.POST, consumes = "multipart/form-data")
   public String upload(@RequestParam("file") MultipartFile file) {
