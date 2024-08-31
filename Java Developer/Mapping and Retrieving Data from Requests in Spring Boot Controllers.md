@@ -416,7 +416,7 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 ```
 **Объяснение:**  
 
-Пример запроса:  
+Пример запроса: `GET /header` 
 Результат: Вывод заголовка `User-Agent`.
 
 
@@ -429,13 +429,19 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
    
    _(подсказка: используйте `@RequestParam`)_
 
+[Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-exercise/src/main/java/ru/edutoria/Main.java)
+
 **Задание 2**: Создайте контроллер, который принимает POST-запрос с данными пользователя в формате JSON и возвращает его возраст.  
    
    _(подсказка: используйте `@RequestBody`)_
 
+[Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-exercise/src/main/java/ru/edutoria/Main.java)
+
 **Задание 3**: Реализуйте метод, который будет принимать переменную пути (например, ID пользователя) и возвращать это значение.  
    
    _(подсказка: используйте `@PathVariable`)_
+
+[Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-exercise/src/main/java/ru/edutoria/Main.java)  
 
 ### 3. Выводы и подведение итогов урока
 
