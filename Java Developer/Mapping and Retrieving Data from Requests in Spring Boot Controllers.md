@@ -58,7 +58,7 @@ public class MyController {
 
 В этом примере метод `hello()` обрабатывает GET-запрос по адресу `/api/hello`.
 
-В примере аннотация @RequestMapping на уровне класса задает базовый путь для всех методов в этом контроллере, поэтому все методы в этом контроллере будут обрабатывать запросы, которые начинаются с `/api`.
+В примере аннотация `@RequestMapping` на уровне класса задает базовый путь для всех методов в этом контроллере, поэтому все методы в этом контроллере будут обрабатывать запросы, которые начинаются с `/api`.
 
 На уровне метода `@RequestMapping` задает точный URL-адрес и HTTP-метод для конкретного метода в контроллере.
 
@@ -83,9 +83,9 @@ public class MyController {
 
 В этом примере на уровне класса аннотация @RequestMapping("/api") указывает, что все методы этого контроллера будут иметь базовый путь `/api`.  
 
-Метод sayHello() будет обрабатывать GET-запросы на путь `/api/hello`.  
+Метод `sayHello()` будет обрабатывать GET-запросы на путь `/api/hello`.  
 
-Метод sayGoodbye() будет обрабатывать POST-запросы на путь `/api/goodbye`.  
+Метод `sayGoodbye()` будет обрабатывать POST-запросы на путь `/api/goodbye`.  
 
 Аннотация `@RequestMapping` предоставляет множество атрибутов, которые позволяют настроить мэппинг HTTP-запросов к методам контроллера. Эти атрибуты помогают точнее контролировать, какие запросы обрабатываются каким методом, и как эти запросы должны быть обработаны.
 
@@ -116,7 +116,9 @@ public class MyController {
   Здесь `method = RequestMethod.POST` указывает, что метод `create()` обрабатывает только POST-запросы.
 
 **Примечание:**  
-Если вы используете Spring 4.3 и выше — то вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Позже мы рассмотрим, как их применять на практике.
+Если вы используете Spring 4.3 и выше — то вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
+
+Позже мы рассмотрим, как применять `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` на практике.
 
 #### 3) Атрибут **`params`** определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
 
@@ -211,7 +213,97 @@ public class MyController {
 
 Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Рассмотрим, как их применять на практике.
 
-!!!
+
+### Пример использования `@GetMapping`
+
+Аннотация `@GetMapping` используется для обработки HTTP GET-запросов.
+
+```java
+@RestController
+@RequestMapping("/api")
+public class MyGetController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
+
+    @GetMapping("/greet")
+    public String greet(@RequestParam(name = "name", defaultValue = "Guest") String name) {
+        return "Hello, " + name + "!";
+    }
+}
+```
+
+**Объяснение**:
+- **`@GetMapping("/hello")`**: Обрабатывает GET-запросы на путь `/api/hello` и возвращает строку "Hello, World!".
+- **`@GetMapping("/greet")`**: Обрабатывает GET-запросы на путь `/api/greet` и возвращает строку с приветствием, используя параметр `name`.
+
+### Пример использования `@PostMapping`
+
+Аннотация `@PostMapping` используется для обработки HTTP POST-запросов.
+
+```java
+@RestController
+@RequestMapping("/api")
+public class MyPostController {
+
+    @PostMapping("/create")
+    public String createItem(@RequestBody String item) {
+        return "Item created: " + item;
+    }
+}
+```
+
+**Объяснение**:
+- **`@PostMapping("/create")`**: Обрабатывает POST-запросы на путь `/api/create` и ожидает JSON-объект в теле запроса. Метод возвращает строку с сообщением о создании элемента.
+
+### Пример использования `@PutMapping`
+
+Аннотация `@PutMapping` используется для обработки HTTP PUT-запросов, которые часто применяются для обновления ресурса.
+
+```java
+@RestController
+@RequestMapping("/api")
+public class MyPutController {
+
+    @PutMapping("/update")
+    public String updateItem(@RequestBody String item) {
+        return "Item updated: " + item;
+    }
+}
+```
+
+**Объяснение**:
+- **`@PutMapping("/update")`**: Обрабатывает PUT-запросы на путь `/api/update` и ожидает JSON-объект в теле запроса. Метод возвращает строку с сообщением об обновлении элемента.
+
+### Пример использования `@DeleteMapping`
+
+Аннотация `@DeleteMapping` используется для обработки HTTP DELETE-запросов, которые часто применяются для удаления ресурса.
+
+```java
+@RestController
+@RequestMapping("/api")
+public class MyDeleteController {
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteItem(@PathVariable("id") Long id) {
+        return "Item with ID " + id + " deleted.";
+    }
+}
+```
+
+**Объяснение**:
+- **`@DeleteMapping("/delete/{id}")`**: Обрабатывает DELETE-запросы на путь `/api/delete/{id}`, где `{id}` — это переменная пути. Метод удаляет элемент с указанным ID и возвращает строку с подтверждением удаления.
+
+### Таким образом:
+
+- **`@GetMapping`**: Обрабатывает GET-запросы. Используется для получения данных.
+- **`@PostMapping`**: Обрабатывает POST-запросы. Используется для создания новых ресурсов.
+- **`@PutMapping`**: Обрабатывает PUT-запросы. Используется для обновления существующих ресурсов.
+- **`@DeleteMapping`**: Обрабатывает DELETE-запросы. Используется для удаления ресурсов.
+
+Эти аннотации позволяют удобно и ясно определять, какие типы запросов обрабатываются методами контроллера.
 
 #### 2.3. Получение данных из запросов
 
