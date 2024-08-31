@@ -357,8 +357,8 @@ public String greet(@RequestParam(name = "name", defaultValue = "Guest") String 
 ```
 **Объяснение:**  
 
-**Пример запроса:** `GET /greet?name=John`  
-**Результат:** `"Hello, John"`
+Пример запроса: `GET /greet?name=John`  
+Результат: `"Hello, John"`
 
 #### 2.3.2. Аннотация @PathVariable используется для извлечения данных из переменных пути (path variables). Они являются частью самого URL.
 
@@ -374,8 +374,8 @@ public String getUserById(@PathVariable("id") Long userId) {
 **Объяснение:**  
 
 
-**Пример запроса:** `GET /user/123`  
-**Результат:** `"User ID: 123"`
+Пример запроса: `GET /user/123`  
+Результат: `"User ID: 123"`
 
 #### 2.3.3. Аннотация @RequestBody используется для получения данных из тела запроса (например, JSON) и автоматической их конвертации в объекты Java.
 
@@ -389,8 +389,7 @@ public User createUser(@RequestBody User user) {
 ```
 **Объяснение:**  
 
-
-**Пример запроса:** `POST /users` с телом запроса:
+Пример запроса: `POST /users` с телом запроса:
 
 ```json
 {
@@ -401,7 +400,7 @@ public User createUser(@RequestBody User user) {
 }
 ```
 
-**Результат:** объект `User` будет передан методу `createUser`.
+Результат: объект `User` будет передан методу `createUser`.
 
 #### 2.3.4. Аннотация @RequestHeader используется для извлечения данных из заголовков HTTP-запроса.
 
@@ -415,8 +414,8 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 ```
 **Объяснение:**  
 
-**Пример запроса:**  
-**Результат:** Вывод заголовка `User-Agent`.
+Пример запроса:  
+Результат: Вывод заголовка `User-Agent`.
 
 
 
