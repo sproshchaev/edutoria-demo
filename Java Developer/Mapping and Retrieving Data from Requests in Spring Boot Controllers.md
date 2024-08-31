@@ -505,11 +505,3 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 
 3. **Документация Spring Framework**  
    Официальная документация Spring содержит актуальную и подробную информацию о мэппинге запросов, использовании аннотаций, работе с контроллерами и других аспектах: [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html).
-
-4. **"Building a RESTful Web Service with Spring Boot"** — Spring Guides  
-   Этот краткий онлайн-гид от разработчиков Spring объясняет основы создания RESTful веб-сервисов с использованием Spring Boot, включая настройку контроллеров и мэппинг запросов: [Spring Boot Guide](https://spring.io/guides/gs/rest-service/).
-
-5. **Видеокурс "Spring & Hibernate for Beginners (includes Spring Boot)"** — Udemy  
-   Видеокурс, который охватывает основные концепции Spring Framework и Spring Boot, в том числе работу с контроллерами и мэппингом запросов. Идеально подходит для визуального изучения и практического опыта: [Udemy Spring Boot Course](https://www.udemy.com/course/spring-hibernate-tutorial/).
-
-Эти ресурсы помогут вам глубже понять, как эффективно использовать контроллеры и мэппинг запросов в Spring Boot.
