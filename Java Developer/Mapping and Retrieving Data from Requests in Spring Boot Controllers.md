@@ -214,9 +214,9 @@ public class MyController {
 Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Рассмотрим, как их применять на практике.
 
 
-### Пример использования `@GetMapping`
+### 1) Аннотация `@GetMapping` используется для обработки HTTP GET-запросов.
 
-Аннотация `@GetMapping` используется для обработки HTTP GET-запросов.
+**Пример:**
 
 ```java
 @RestController
@@ -228,20 +228,15 @@ public class MyGetController {
         return "Hello, World!";
     }
 
-    @GetMapping("/greet")
-    public String greet(@RequestParam(name = "name", defaultValue = "Guest") String name) {
-        return "Hello, " + name + "!";
-    }
 }
 ```
 
 **Объяснение**:
 - **`@GetMapping("/hello")`**: Обрабатывает GET-запросы на путь `/api/hello` и возвращает строку "Hello, World!".
-- **`@GetMapping("/greet")`**: Обрабатывает GET-запросы на путь `/api/greet` и возвращает строку с приветствием, используя параметр `name`.
 
-### Пример использования `@PostMapping`
+### 2) Аннотация `@PostMapping` используется для обработки HTTP POST-запросов.
 
-Аннотация `@PostMapping` используется для обработки HTTP POST-запросов.
+**Пример:**
 
 ```java
 @RestController
@@ -258,9 +253,9 @@ public class MyPostController {
 **Объяснение**:
 - **`@PostMapping("/create")`**: Обрабатывает POST-запросы на путь `/api/create` и ожидает JSON-объект в теле запроса. Метод возвращает строку с сообщением о создании элемента.
 
-### Пример использования `@PutMapping`
+### 3) Аннотация `@PutMapping` используется для обработки HTTP PUT-запросов, которые часто применяются для обновления ресурса.
 
-Аннотация `@PutMapping` используется для обработки HTTP PUT-запросов, которые часто применяются для обновления ресурса.
+**Пример:**
 
 ```java
 @RestController
@@ -277,9 +272,9 @@ public class MyPutController {
 **Объяснение**:
 - **`@PutMapping("/update")`**: Обрабатывает PUT-запросы на путь `/api/update` и ожидает JSON-объект в теле запроса. Метод возвращает строку с сообщением об обновлении элемента.
 
-### Пример использования `@DeleteMapping`
+### 4) Аннотация `@DeleteMapping` используется для обработки HTTP DELETE-запросов, которые часто применяются для удаления ресурса.
 
-Аннотация `@DeleteMapping` используется для обработки HTTP DELETE-запросов, которые часто применяются для удаления ресурса.
+**Пример:**
 
 ```java
 @RestController
