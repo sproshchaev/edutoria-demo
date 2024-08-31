@@ -85,6 +85,128 @@ public class MyController {
 Метод sayHello() будет обрабатывать GET-запросы на путь `/api/hello`.  
 Метод sayGoodbye() будет обрабатывать POST-запросы на путь `/api/goodbye`.  
 
+Аннотация `@RequestMapping` в Spring предоставляет множество атрибутов, которые позволяют настроить мэппинг HTTP-запросов к методам контроллера. Эти атрибуты помогают точнее контролировать, какие запросы обрабатываются каким методом, и как эти запросы должны быть обработаны.
+
+Вот основные атрибуты аннотации `@RequestMapping`:
+
+### 1. **`value` или `path`**
+- **Описание**: Определяет URL-адреса (или пути), к которым привязан метод контроллера.
+- **Тип**: `String[]` (массив строк)
+- **Пример использования**:
+  ```java
+  @RequestMapping(value = "/api/greet", method = RequestMethod.GET)
+  public String greet() {
+      return "Hello!";
+  }
+  ```
+  Здесь `value = "/api/greet"` задает путь `/api/greet`, который будет обрабатываться методом `greet()`.
+
+### 2. **`method`**
+- **Описание**: Указывает HTTP-методы (GET, POST, PUT, DELETE и т.д.), для которых этот метод контроллера должен быть вызван.
+- **Тип**: `RequestMethod[]` (массив значений перечисления `RequestMethod`)
+- **Пример использования**:
+  ```java
+  @RequestMapping(value = "/api/create", method = RequestMethod.POST)
+  public String create() {
+      return "Resource created!";
+  }
+  ```
+  Здесь `method = RequestMethod.POST` указывает, что метод `create()` обрабатывает только POST-запросы.
+
+### 3. **`params`**
+- **Описание**: Определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
+- **Тип**: `String[]` (массив строк)
+- **Пример использования**:
+  ```java
+  @RequestMapping(value = "/api/search", params = "query")
+  public String search(@RequestParam String query) {
+      return "Searching for: " + query;
+  }
+  ```
+  Здесь `params = "query"` указывает, что метод будет вызван только если параметр `query` присутствует в запросе, например, `/api/search?query=spring`.
+
+### 4. **`headers`**
+- **Описание**: Определяет заголовки HTTP-запроса, которые должны присутствовать для того, чтобы метод был вызван. Можно указывать конкретные значения заголовков.
+- **Тип**: `String[]` (массив строк)
+- **Пример использования**:
+  ```java
+  @RequestMapping(value = "/api/info", headers = "X-Requested-With=XMLHttpRequest")
+  public String info() {
+      return "Information from AJAX request";
+  }
+  ```
+  Здесь `headers = "X-Requested-With=XMLHttpRequest"` указывает, что метод будет вызван только если заголовок `X-Requested-With` имеет значение `XMLHttpRequest`.
+
+### 5. **`produces`**
+- **Описание**: Определяет типы контента (MIME-типы), которые метод может возвращать. Используется для указания формата ответа.
+- **Тип**: `String[]` (массив строк)
+- **Пример использования**:
+  ```java
+  @RequestMapping(value = "/api/json", produces = "application/json")
+  public String getJson() {
+      return "{\"message\":\"Hello, JSON!\"}";
+  }
+  ```
+  Здесь `produces = "application/json"` указывает, что метод возвращает ответ в формате JSON.
+
+### 6. **`consumes`**
+- **Описание**: Определяет типы контента (MIME-типы), которые метод может принимать в запросе. Используется для указания формата входных данных.
+- **Тип**: `String[]` (массив строк)
+- **Пример использования**:
+  ```java
+  @RequestMapping(value = "/api/upload", method = RequestMethod.POST, consumes = "multipart/form-data")
+  public String upload(@RequestParam("file") MultipartFile file) {
+      return "File uploaded successfully!";
+  }
+  ```
+  Здесь `consumes = "multipart/form-data"` указывает, что метод принимает запросы с типом контента `multipart/form-data`, который обычно используется для загрузки файлов.
+
+### Пример использования всех атрибутов
+
+Вот пример контроллера, который использует все перечисленные атрибуты `@RequestMapping`:
+
+```java
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api")
+public class MyController {
+
+    @RequestMapping(
+        value = "/items",
+        method = RequestMethod.GET,
+        params = "category",
+        headers = "Accept=application/json",
+        produces = "application/json"
+    )
+    public String getItems(@RequestParam String category) {
+        return "{\"category\":\"" + category + "\",\"items\":[\"Item1\",\"Item2\"]}";
+    }
+
+    @RequestMapping(
+        value = "/items",
+        method = RequestMethod.POST,
+        consumes = "application/json"
+    )
+    public String createItem(@RequestBody String newItem) {
+        return "Item created: " + newItem;
+    }
+}
+```
+
+**Объяснение**:
+- **Метод `getItems`**:
+  - Обрабатывает GET-запросы на путь `/api/items`.
+  - Запрос должен содержать параметр `category`.
+  - Запрос должен иметь заголовок `Accept` со значением `application/json`.
+  - Возвращает ответ в формате JSON.
+
+- **Метод `createItem`**:
+  - Обрабатывает POST-запросы на путь `/api/items`.
+  - Принимает тело запроса в формате JSON (`consumes = "application/json"`).
+
+Эти атрибуты позволяют гибко настраивать обработку запросов и отвечать на различные сценарии использования в веб-приложении.
+
 #### 2.3. Получение данных из запросов
 
 Важной частью работы с контроллерами является извлечение данных из HTTP-запросов. Рассмотрим основные аннотации для этого:
