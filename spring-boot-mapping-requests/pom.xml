@@ -13,10 +13,10 @@
         <module>task-02</module>
         <module>task-03</module>
         <module>task-01/task-01-exercise</module>
-        <module>task-02/task-02-exercise</module>
-        <module>task-03/task-03-exercise</module>
         <module>task-01/task-01-solution</module>
+        <module>task-02/task-02-exercise</module>
         <module>task-02/task-02-solution</module>
+        <module>task-03/task-03-exercise</module>
         <module>task-03/task-03-solution</module>
     </modules>
 
