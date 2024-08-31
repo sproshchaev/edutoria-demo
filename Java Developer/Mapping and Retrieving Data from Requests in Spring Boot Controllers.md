@@ -40,9 +40,9 @@
 
 Контроллер — это Java-класс, который управляет поступающими HTTP-запросами и отвечает за передачу данных обратно пользователю или клиенту. Spring Boot использует аннотации для того, чтобы связать запросы с методами контроллеров. Основной аннотацией является `@RestController`, которая указывает Spring, что данный класс будет обрабатывать HTTP-запросы.
 
-Аннотация `@RestController` в Spring Boot упрощает создание RESTful веб-сервисов, объединяя функции двух отдельных аннотаций: @Controller и @ResponseBody. 
+Аннотация `@RestController` в Spring Boot упрощает создание RESTful веб-сервисов, объединяя функции двух отдельных аннотаций: `@Controller` и `@ResponseBody`. 
 
-Когда класс аннотирован @RestController, все методы этого класса по умолчанию возвращают данные в теле HTTP-ответа.
+Когда класс аннотирован `@RestController`, все методы этого класса по умолчанию возвращают данные в теле HTTP-ответа.
 
 **Пример:**
 
@@ -63,10 +63,10 @@ public class MyController {
 
 Мэппинг (сопоставление) запросов — это процесс связывания HTTP-запроса с конкретным методом контроллера. Spring Boot предлагает несколько аннотаций для мэппинга:
 
-- `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (GET, POST, PUT, DELETE).
+- `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (`GET`, `POST`, `PUT`, `DELETE`).
 - `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` — специализированные аннотации для обработки конкретных типов запросов.
 
-Аннотация @RequestMapping используется для мэппинга HTTP-запросов к методам контроллеров. Это универсальная аннотация, которая позволяет настраивать мэппинг запросов для любых HTTP-методов, таких как GET, POST, PUT, DELETE и других
+Аннотация `@RequestMapping` используется для мэппинга HTTP-запросов к методам контроллеров. Это универсальная аннотация, которая позволяет настраивать мэппинг запросов для любых HTTP-методов, таких как `GET`, `POST`, `PUT`, `DELETE` и других
 
 `@RequestMapping` можно применять как на уровне класса, так и на уровне метода.
 
@@ -150,7 +150,7 @@ public class MyController {
   Здесь `method = RequestMethod.POST` указывает, что метод `create()` обрабатывает только POST-запросы.
 
 **Примечание:**  
-Если вы используете Spring 4.3 и выше — то вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
+Если вы используете Spring 4.3 и выше — то вместо `@RequestMapping` с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
 
 Позже мы рассмотрим, как применять `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` на практике.
 
@@ -252,7 +252,9 @@ public class MyController {
 
 Эти атрибуты позволяют гибко настраивать обработку запросов и отвечать на различные сценарии использования в веб-приложении.
 
-Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. Рассмотрим, как их применять на практике.
+Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо @RequestMapping с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
+
+Рассмотрим, как их применять на практике.
 
 
 #### 1) Аннотация `@GetMapping` используется для обработки HTTP GET-запросов.
