@@ -91,10 +91,10 @@ public class MyController {
 
 Рассмотрим основные атрибуты аннотации `@RequestMapping`:
 
-#### 1. Атрибут**`value` или `path`**
-- **Описание**: Определяет URL-адреса (или пути), к которым привязан метод контроллера.
-- **Тип**: `String[]` (массив строк)
-- **Пример:**
+#### 1. Атрибут **`value`** или **`path`** определяет URL-адреса (или пути), к которым привязан метод контроллера.
+
+**Пример:**  
+
   ```java
   @RequestMapping(value = "/api/greet", method = RequestMethod.GET)
   public String greet() {
@@ -103,10 +103,10 @@ public class MyController {
   ```
   Здесь `value = "/api/greet"` задает путь `/api/greet`, который будет обрабатываться методом `greet()`.
 
-#### 2. Атрибут **`method`**
-- **Описание**: Указывает HTTP-методы (GET, POST, PUT, DELETE и т.д.), для которых этот метод контроллера должен быть вызван.
-- **Тип**: `RequestMethod[]` (массив значений перечисления `RequestMethod`)
-- **Пример:**
+#### 2. Атрибут **`method`** указывает HTTP-методы (GET, POST, PUT, DELETE и т.д.), для которых этот метод контроллера должен быть вызван.
+
+**Пример:**  
+
   ```java
   @RequestMapping(value = "/api/create", method = RequestMethod.POST)
   public String create() {
@@ -115,10 +115,10 @@ public class MyController {
   ```
   Здесь `method = RequestMethod.POST` указывает, что метод `create()` обрабатывает только POST-запросы.
 
-#### 3. Атрибут **`params`**
-- **Описание**: Определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
-- **Тип**: `String[]` (массив строк)
-- **Пример:**
+#### 3. Атрибут **`params`** определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
+
+**Пример:**  
+
   ```java
   @RequestMapping(value = "/api/search", params = "query")
   public String search(@RequestParam String query) {
@@ -127,10 +127,10 @@ public class MyController {
   ```
   Здесь `params = "query"` указывает, что метод будет вызван только если параметр `query` присутствует в запросе, например, `/api/search?query=spring`.
 
-#### 4. Атрибут **`headers`**
-- **Описание**: Определяет заголовки HTTP-запроса, которые должны присутствовать для того, чтобы метод был вызван. Можно указывать конкретные значения заголовков.
-- **Тип**: `String[]` (массив строк)
-- **Пример:**
+#### 4. Атрибут **`headers`** определяет заголовки HTTP-запроса, которые должны присутствовать для того, чтобы метод был вызван. Можно указывать конкретные значения заголовков.
+
+**Пример:**  
+
   ```java
   @RequestMapping(value = "/api/info", headers = "X-Requested-With=XMLHttpRequest")
   public String info() {
@@ -139,10 +139,10 @@ public class MyController {
   ```
   Здесь `headers = "X-Requested-With=XMLHttpRequest"` указывает, что метод будет вызван только если заголовок `X-Requested-With` имеет значение `XMLHttpRequest`.
 
-#### 5. Атрибут **`produces`**
-- **Описание**: Определяет типы контента (MIME-типы), которые метод может возвращать. Используется для указания формата ответа.
-- **Тип**: `String[]` (массив строк)
-- **Пример:**
+#### 5. Атрибут **`produces`** определяет типы контента (MIME-типы), которые метод может возвращать. Используется для указания формата ответа.
+
+**Пример:**
+
   ```java
   @RequestMapping(value = "/api/json", produces = "application/json")
   public String getJson() {
@@ -151,10 +151,9 @@ public class MyController {
   ```
   Здесь `produces = "application/json"` указывает, что метод возвращает ответ в формате JSON.
 
-#### 6. Атрибут **`consumes`**
-- **Описание**: Определяет типы контента (MIME-типы), которые метод может принимать в запросе. Используется для указания формата входных данных.
-- **Тип**: `String[]` (массив строк)
-- **Пример:**
+#### 6. Атрибут **`consumes`** определяет типы контента (MIME-типы), которые метод может принимать в запросе. Используется для указания формата входных данных.
+
+**Пример:**
   ```java
   @RequestMapping(value = "/api/upload", method = RequestMethod.POST, consumes = "multipart/form-data")
   public String upload(@RequestParam("file") MultipartFile file) {
@@ -163,13 +162,11 @@ public class MyController {
   ```
   Здесь `consumes = "multipart/form-data"` указывает, что метод принимает запросы с типом контента `multipart/form-data`, который обычно используется для загрузки файлов.
 
-### Пример использования всех атрибутов
+В контроллере, могут использоваться сразу несколько перечисленных атрибутов аннотации `@RequestMapping`.
 
-Вот пример контроллера, который использует все перечисленные атрибуты `@RequestMapping`:
+**Пример**
 
 ```java
-import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/api")
 public class MyController {
