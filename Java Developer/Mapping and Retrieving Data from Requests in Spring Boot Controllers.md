@@ -425,23 +425,31 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 
 Теперь перейдем к практическим заданиям, которые помогут закрепить изученный, в данном уроке, материал.
 
+Все задания находятся в [Репозитории](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/README.md) нашего урока в котором прилагается подробная инструкция относительно порядка выполнения.
+
+Заготовки классов находятся в каталоге с суффиксом `-exercise`.
+
+В каждом классе присутствуют комментарии `// TODO: ...` которые подскажут порядок выполнения задания.
+
+После того, как вы выполните задание — можно сверить свое решение с правильным вариантом, который находится в том же репозитории в каталоге с суффиксом `-solution`.
+
 **Задание 1**: Создайте контроллер с методом, который принимает GET-запрос и возвращает персонализированное приветствие в зависимости от параметра `name`.  
    
    _(подсказка: используйте `@RequestParam`)_
 
-[Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-exercise/src/main/java/ru/edutoria/Main.java)
+[Перейти к выполнению задания 1](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-01/task-01-exercise/src/main/java/ru/edutoria/Main.java)
 
 **Задание 2**: Создайте контроллер, который принимает POST-запрос с данными пользователя в формате JSON и возвращает его возраст.  
    
    _(подсказка: используйте `@RequestBody`)_
 
-[Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-exercise/src/main/java/ru/edutoria/Main.java)
+[Перейти к выполнению задания 2](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-02/task-02-exercise/src/main/java/ru/edutoria/Main.java)
 
 **Задание 3**: Реализуйте метод, который будет принимать переменную пути (например, ID пользователя) и возвращать это значение.  
    
    _(подсказка: используйте `@PathVariable`)_
 
-[Перейти к выполнению](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-exercise/src/main/java/ru/edutoria/Main.java)  
+[Перейти к выполнению задания 3](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/task-03/task-03-exercise/src/main/java/ru/edutoria/Main.java)  
 
 ### 3. Выводы и подведение итогов урока
 
