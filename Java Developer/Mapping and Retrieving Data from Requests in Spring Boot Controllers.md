@@ -11,8 +11,8 @@
 **RESTful веб-сервисы (или RESTful APIs)** — это архитектурный стиль для создания веб-сервисов, который использует стандартные HTTP методы и принципы REST (Representational State Transfer). RESTful веб-сервисы обеспечивают простоту и масштабируемость, что делает их популярным выбором для разработки API.
 
 <p align="center">
-  <a href="https://postimg.cc/vxr9rn6m">
-    <img src="https://i.postimg.cc/qqYLdXJ2/rest-ful.jpg" alt="rest-ful.jpg"/>
+  <a href="https://postimg.cc/mtSChQsX">
+    <img src="https://i.postimg.cc/J4fq6qdL/2024-09-01-14-35-31.png" alt="2024-09-01-14-35-31.png" align="middle"/>
   </a>
 </p>
 
