@@ -1,3 +1,5 @@
+[![sb-edutoria-logo.png](https://i.postimg.cc/8s8NwgCD/sb-edutoria-logo.png)](https://edutoria.ru/)
+
 # Репозиторий для выполнения практических заданий урока
 
 Для выполнения практических заданий необходимо:  
