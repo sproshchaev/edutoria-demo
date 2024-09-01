@@ -1,4 +1,4 @@
-[![spring-boot-logo.png](https://i.postimg.cc/8kd0mzMk/spring-boot-logo-2.png)](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-requestmapping.html)
+[![sb-edutoria-logo.png](https://i.postimg.cc/8s8NwgCD/sb-edutoria-logo.png)](https://edutoria.ru/)
 
 ## Урок: «Мэппинг и получение данных из запросов в контроллерах Spring Boot»
 
