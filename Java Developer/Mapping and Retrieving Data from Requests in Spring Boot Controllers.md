@@ -456,15 +456,17 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 
 Все задания находятся в [Репозитории](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/README.md) нашего урока в котором прилагается подробная инструкция относительно порядка выполнения.
 
-[![2024-09-01-13-47-30.png](https://i.postimg.cc/Zq3Lzy2d/2024-09-01-13-47-30.png)](https://postimg.cc/sBjWp1Vj)
-
 Заготовки классов находятся в каталоге с суффиксом `-exercise`.
+
+[![2024-09-01-13-47-30.png](https://i.postimg.cc/Zq3Lzy2d/2024-09-01-13-47-30.png)](https://postimg.cc/sBjWp1Vj)
 
 В каждом классе присутствуют комментарии `// TODO: ...` которые подскажут порядок выполнения задания.
 
 [![2024-09-01-13-50-40.png](https://i.postimg.cc/3NLXFj4P/2024-09-01-13-50-40.png)](https://postimg.cc/ZvdvTdLc)
 
 После того, как вы выполните задание — можно сверить свое решение с правильным вариантом, который находится в том же репозитории в каталоге с суффиксом `-solution`.
+
+[![2024-09-01-13-52-25.png](https://i.postimg.cc/QdKQcTXy/2024-09-01-13-52-25.png)](https://postimg.cc/QFsK3VKQ)
 
 **Задание 1**: Создайте контроллер с методом, который принимает GET-запрос и возвращает персонализированное приветствие в зависимости от параметра `name`.  
    
