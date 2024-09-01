@@ -501,11 +501,14 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 
 **Список рекомендованной литературы:**
 
-1. **"Spring Boot in Action"** — Craig Walls  
+1. **Walls, Craig. *Spring Boot in Action*. Manning Publications, 2016.**  
+
    Книга отлично подходит для новичков и объясняет основные принципы работы с Spring Boot, включая создание контроллеров, мэппинг запросов, обработку данных и другие важные темы.
 
-2. **"Spring Microservices in Action"** — John Carnell  
-   Эта книга поможет углубиться в разработку RESTful-сервисов и микросервисов с использованием Spring Boot, включая обработку запросов и настройку контроллеров.
+2. **Carnell, John. *Spring Microservices in Action*. 2nd ed., Manning Publications, 2021.**  
+
+   Книга поможет углубиться в разработку RESTful-сервисов и микросервисов с использованием Spring Boot, включая обработку запросов и настройку контроллеров.
 
 3. **Документация Spring Framework**  
+
    Официальная документация Spring содержит актуальную и подробную информацию о мэппинге запросов, использовании аннотаций, работе с контроллерами и других аспектах: [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html).
