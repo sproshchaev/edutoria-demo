@@ -41,13 +41,13 @@
 #### 2.1. Что такое контроллер в Spring Boot?
 
 Контроллер (Rest controller) — это Java-класс, который управляет поступающими HTTP-запросами и отвечает за передачу данных обратно пользователю или клиенту. Spring Boot использует аннотации для того, чтобы связать запросы с методами контроллеров. Основной аннотацией является `@RestController`, которая указывает Spring, что данный класс будет обрабатывать HTTP-запросы.  
-
+<br>
 <p align="center">
   <a href="https://postimg.cc/JHr7FH20">
     <img src="https://i.postimg.cc/Rhf3Nc17/spring-boot-controller.png" alt="spring-boot-controller.png"/>
   </a>
 </p>
-
+<br>
 Аннотация `@RestController` в Spring Boot упрощает создание RESTful веб-сервисов, объединяя функции двух отдельных аннотаций: `@Controller` и `@ResponseBody`. 
 
 Когда класс аннотирован `@RestController`, все методы этого класса по умолчанию возвращают данные в теле HTTP-ответа.
