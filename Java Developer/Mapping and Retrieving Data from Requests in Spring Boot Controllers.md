@@ -63,13 +63,13 @@ public class MyController {
 
 Мэппинг (сопоставление) запросов — это процесс связывания HTTP-запроса с конкретным методом контроллера. Spring Boot предлагает несколько аннотаций для мэппинга:
 
-- `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (`GET`, `POST`, `PUT`, `DELETE`).  
+- `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).  
 
-- `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` — специализированные аннотации для обработки конкретных типов запросов.
+- `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping`, `@DeleteMapping` — специализированные аннотации для обработки конкретных типов запросов.
 
 [![spring-boot-mapping.png](https://i.postimg.cc/SNsjMbyT/spring-boot-mapping.png)](https://postimg.cc/0rT9T3KD)
 
-Аннотация `@RequestMapping` используется для мэппинга HTTP-запросов к методам контроллеров. Это универсальная аннотация, которая позволяет настраивать мэппинг запросов для любых HTTP-методов, таких как `GET`, `POST`, `PUT`, `DELETE` и других
+Аннотация `@RequestMapping` используется для мэппинга HTTP-запросов к методам контроллеров. Это универсальная аннотация, которая позволяет настраивать мэппинг запросов для любых HTTP-методов, таких как `GET`, `POST`, `PUT`, `PATCH`, `DELETE` и других
 
 `@RequestMapping` можно применять как на уровне класса, так и на уровне метода.
 
@@ -92,7 +92,7 @@ public class MyController {
   
 В этом примере метод `hello()` обрабатывает GET-запрос по адресу `/api/hello`.
 
-Для того чтобы тестировать методы контроллера в приложении и выполнять запросы `GET`, `POST`, `PUT`, `DELETE` и другие, необходимо воспользоваться такими инструментами, как [cURL](https://curl.se/), [Postman](https://www.postman.com/), [Insomnia](https://insomnia.rest/), [SoapUI](https://www.soapui.org/) и др. 
+Для того чтобы тестировать методы контроллера в приложении и выполнять запросы `GET`, `POST`, `PUT`, `PATCH`, `DELETE` и другие, необходимо воспользоваться такими инструментами, как [cURL](https://curl.se/), [Postman](https://www.postman.com/), [Insomnia](https://insomnia.rest/), [SoapUI](https://www.soapui.org/) и др. 
 
 Подробнее о работе с этими инструментами можно ознакомиться на официальном сайте каждого продукта, перейдя по ссылке. 
 
@@ -144,7 +144,7 @@ public class MyController {
   
   Здесь `value = "/api/greet"` задает путь `/api/greet`, который будет обрабатываться методом `greet()`.
 
-#### 2) Атрибут **`method`** указывает HTTP-методы (GET, POST, PUT, DELETE и т.д.), для которых этот метод контроллера должен быть вызван.
+#### 2) Атрибут **`method`** указывает HTTP-методы (GET, POST, PUT, PATCH, DELETE и т.д.), для которых этот метод контроллера должен быть вызван.
 
 **Пример:**  
 
@@ -157,9 +157,9 @@ public class MyController {
   Здесь `method = RequestMethod.POST` указывает, что метод `create()` обрабатывает только POST-запросы.
 
 **Примечание:**  
-Если вы используете Spring 4.3 и выше — то вместо `@RequestMapping` с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
+Если вы используете Spring 4.3 и выше — то вместо `@RequestMapping` с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.PATCH`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping` `@DeleteMapping`. 
 
-Позже мы рассмотрим, как применять `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` на практике.
+Позже мы рассмотрим, как применять `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping`,`@DeleteMapping` на практике.
 
 #### 3) Атрибут **`params`** определяет параметры запроса, которые должны присутствовать в запросе для того, чтобы метод был вызван. Можно указывать конкретные значения параметров.
 
@@ -259,7 +259,7 @@ public class MyController {
 
 Эти атрибуты позволяют гибко настраивать обработку запросов и отвечать на различные сценарии использования в веб-приложении.
 
-Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо `@RequestMapping` с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`. 
+Как мы уже упоминали ранее в Spring Framework, если вы используете Spring 4.3 и выше — вместо `@RequestMapping` с указанием атрибута `method` со значениями `RequestMethod.GET`, `RequestMethod.POST`, `RequestMethod.PUT`, `RequestMethod.PATCH`, `RequestMethod.DELETE`, предпочтительнее использовать аннотации `@GetMapping`, `@PostMapping`, `@PutMapping`, `@PatchMapping`, `@DeleteMapping`. 
 
 Рассмотрим, как их применять на практике.
 
@@ -322,7 +322,28 @@ public class MyPutController {
 **Объяснение:**
 - **`@PutMapping("/update")`**: Обрабатывает PUT-запросы на путь `/api/update` и ожидает JSON-объект в теле запроса. Метод возвращает строку с сообщением об обновлении элемента.
 
-#### 4) Аннотация `@DeleteMapping` используется для обработки HTTP DELETE-запросов, которые часто применяются для удаления ресурса.
+### 4) Аннотация `@PatchMapping` используется для обработки HTTP PATCH-запросов, которые часто применяются для частичного обновления ресурса.
+
+**Пример:**
+
+```java
+@RestController
+@RequestMapping("/api")
+public class MyPatchController {
+
+    @PatchMapping("/update")
+    public String patchItem(@RequestBody String item) {
+        return "Item partially updated: " + item;
+    }
+}
+```
+
+**Объяснение:**
+- **`@PatchMapping("/update")`**: Обрабатывает PATCH-запросы на путь `/api/update` и ожидает JSON-объект в теле запроса. Метод возвращает строку с сообщением о частичном обновлении элемента. 
+
+Этот пример демонстрирует использование `@PatchMapping` для обновления только некоторых частей ресурса, в отличие от `@PutMapping`, который используется для полного обновления ресурса.
+
+#### 5) Аннотация `@DeleteMapping` используется для обработки HTTP DELETE-запросов, которые часто применяются для удаления ресурса.
 
 **Пример:**
 
