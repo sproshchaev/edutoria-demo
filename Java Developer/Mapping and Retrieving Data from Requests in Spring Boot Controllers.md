@@ -456,6 +456,8 @@ public String getHeader(@RequestHeader("User-Agent") String userAgent) {
 
 Все задания находятся в [Репозитории](https://github.com/sproshchaev/edutoria-demo/blob/main/spring-boot-mapping-requests/README.md) нашего урока в котором прилагается подробная инструкция относительно порядка выполнения.
 
+[![2024-09-01-13-47-30.png](https://i.postimg.cc/Zq3Lzy2d/2024-09-01-13-47-30.png)](https://postimg.cc/sBjWp1Vj)
+
 Заготовки классов находятся в каталоге с суффиксом `-exercise`.
 
 В каждом классе присутствуют комментарии `// TODO: ...` которые подскажут порядок выполнения задания.
