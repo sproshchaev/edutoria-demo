@@ -66,6 +66,8 @@ public class MyController {
 - `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (`GET`, `POST`, `PUT`, `DELETE`).
 - `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` — специализированные аннотации для обработки конкретных типов запросов.
 
+[![spring-boot-mapping.png](https://i.postimg.cc/SNsjMbyT/spring-boot-mapping.png)](https://postimg.cc/0rT9T3KD)
+
 Аннотация `@RequestMapping` используется для мэппинга HTTP-запросов к методам контроллеров. Это универсальная аннотация, которая позволяет настраивать мэппинг запросов для любых HTTP-методов, таких как `GET`, `POST`, `PUT`, `DELETE` и других
 
 `@RequestMapping` можно применять как на уровне класса, так и на уровне метода.
