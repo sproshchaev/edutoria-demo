@@ -5,7 +5,11 @@
 ```bash
 git clone https://github.com/sproshchaev/edutoria-demo.git
 ```
-2. Открыть проект в IDE IntelliJ IDEA и выполнить последовательно задания с первого по третье, в соответствии с комментариями, обозначенными в коде через `// TODO: ...`  
+2. Открыть проект в IDE IntelliJ IDEA и выполнить последовательно задания с первого по третье: `task-01-exercise`, `task-02-exercise`, `task-03-exercise`. 
+
+[![2024-09-01-13-47-30.png](https://i.postimg.cc/Zq3Lzy2d/2024-09-01-13-47-30.png)](https://postimg.cc/sBjWp1Vj)
+
+В каждом проекте присутствуют комментарии, обозначенные в коде через `// TODO: ...`, которые дают подсказку относительно того, что нужно добавить в классе:  
 
 [![2024-09-01-13-50-40.png](https://i.postimg.cc/3NLXFj4P/2024-09-01-13-50-40.png)](https://postimg.cc/ZvdvTdLc)
 
