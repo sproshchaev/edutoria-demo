@@ -63,7 +63,8 @@ public class MyController {
 
 Мэппинг (сопоставление) запросов — это процесс связывания HTTP-запроса с конкретным методом контроллера. Spring Boot предлагает несколько аннотаций для мэппинга:
 
-- `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (`GET`, `POST`, `PUT`, `DELETE`).
+- `@RequestMapping` — универсальная аннотация для обработки любого HTTP-запроса (`GET`, `POST`, `PUT`, `DELETE`).  
+
 - `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` — специализированные аннотации для обработки конкретных типов запросов.
 
 [![spring-boot-mapping.png](https://i.postimg.cc/SNsjMbyT/spring-boot-mapping.png)](https://postimg.cc/0rT9T3KD)
